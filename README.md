@@ -99,30 +99,33 @@ cd link-guard-app-flutter
 flutter pub get
 
 # 3. Add your API keys
-#    Open: lib/core/services/scan_service.dart
-#    Replace:
-#      const _googleApiKey = 'YOUR_GOOGLE_SAFE_BROWSING_KEY';
-#      const _vtApiKey     = 'YOUR_VIRUSTOTAL_API_KEY';
+#    Copy the template to a new file:
+cp config.example.json config.json
+
+#    Open config.json and insert your real keys.
+#    (config.json is ignored by git for security)
 
 # 4. Run the app
-flutter run
+flutter run --dart-define-from-file=config.json
 ```
 
 ---
 
 ## 🔑 API Keys Configuration
 
-Open `lib/core/services/scan_service.dart` and replace the placeholder keys:
+We use `--dart-define-from-file` to securely inject API keys at build time without committing them to source control.
 
-```dart
-// Google Safe Browsing
-const _googleApiKey = 'YOUR_GOOGLE_SAFE_BROWSING_KEY';
+1. Create a `config.json` file in the root of the project.
+2. Add your keys:
 
-// VirusTotal
-const _vtApiKey = 'YOUR_VIRUSTOTAL_API_KEY';
+```json
+{
+  "GOOGLE_SAFE_BROWSING_KEY": "YOUR_KEY_HERE",
+  "VIRUSTOTAL_API_KEY": "YOUR_KEY_HERE"
+}
 ```
 
-> **Tip for production:** Load keys from a `.env` file or use [flutter_dotenv](https://pub.dev/packages/flutter_dotenv) to avoid hardcoding secrets.
+> **Note:** `config.json` is explicitly added to `.gitignore`. Never commit your real API keys!
 
 ---
 
@@ -138,7 +141,7 @@ keyAlias=YOUR_KEY_ALIAS
 storeFile=../../keystore/upload-keystore.jks
 
 # 2. Build the App Bundle
-flutter build appbundle --release
+flutter build appbundle --release --dart-define-from-file=config.json
 
 # Output: build/app/outputs/bundle/release/app-release.aab
 ```
