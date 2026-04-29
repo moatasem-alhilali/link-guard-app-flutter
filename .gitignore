@@ -49,3 +49,8 @@ android/key.properties
 keystore/
 *.jks
 *.keystore
+
+# ── API Keys – NEVER commit these ────────────────────────
+# Real keys live in config.json (excluded).
+# Use config.example.json as the committed template.
+config.json

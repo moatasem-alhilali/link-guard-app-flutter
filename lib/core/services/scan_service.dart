@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import '../config/app_config.dart';
 
 class ApiException implements Exception {
   final String message;
@@ -53,8 +54,9 @@ final _dio = _buildDio();
 const _googleEndpoint =
     'https://safebrowsing.googleapis.com/v4/threatMatches:find';
 
-// Replace with your actual key or load from a config file
-const _googleApiKey = 'AIzaSyA0TjboC0CohJmyfcC6cv2zs2yVlDbXnCE';
+// Key is injected at build time via --dart-define-from-file=config.json
+// Never stored in source code or committed to git.
+String get _googleApiKey => AppConfig.googleSafeBrowsingKey;
 
 const _maliciousThreats = {'MALWARE', 'POTENTIALLY_HARMFUL_APPLICATION'};
 const _suspiciousThreats = {'SOCIAL_ENGINEERING', 'UNWANTED_SOFTWARE'};
@@ -125,8 +127,8 @@ Future<Map<String, dynamic>> checkWithGoogle(String url) async {
 
 const _vtBase = 'https://www.virustotal.com/api/v3';
 
-// Replace with your actual key or load from a config file
-const _vtApiKey = 'YOUR_VIRUSTOTAL_API_KEY';
+// Key is injected at build time via --dart-define-from-file=config.json
+String get _vtApiKey => AppConfig.virusTotalApiKey;
 
 Future<Map<String, dynamic>> checkWithVirusTotal(String url) async {
   try {

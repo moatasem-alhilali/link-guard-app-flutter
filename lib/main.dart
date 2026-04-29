@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'core/config/app_config.dart';
 
 import 'core/providers/theme_provider.dart';
 import 'core/theme/app_theme.dart';
@@ -8,6 +9,10 @@ import 'screens/home_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Validate API keys are injected – crashes in debug if config.json was not passed
+  AppConfig.assertConfigured();
+
   await EasyLocalization.ensureInitialized();
 
   // Load persisted theme
