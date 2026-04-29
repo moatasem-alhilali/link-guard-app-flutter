@@ -1,0 +1,39 @@
+خطوات تجهيز التطبيق لمتجر جوجل بلاي (Google Play Store)
+--------------------------------------------------
+
+لقد تم إعداد مشروع Flutter بالكامل مع الكود البرمجي اللازم لفحص الروابط.
+لكي يكون التطبيق جاهزاً للرفع على المتجر، يجب عليك القيام بالخطوات اليدوية التالية:
+
+1. مفاتيح الـ API:
+   - افتح ملف: `lib/services/api_service.dart`
+   - قم باستبدال `YOUR_GOOGLE_SAFE_BROWSING_KEY` بمفتاحك الخاص من Google Cloud Console.
+   - قم باستبدال `YOUR_VIRUSTOTAL_API_KEY` بمفتاحك الخاص من VirusTotal API.
+
+2. أيقونة التطبيق (App Icon):
+   - قم بتجهيز أيقونة بدقة 1024x1024.
+   - استخدم مكتبة `flutter_launcher_icons` لتوليد الأيقونات لكل المنصات.
+   - أضف الإعدادات في `pubspec.yaml` ثم شغل الأمر: `flutter pub run flutter_launcher_icons:main`
+
+3. التوقيع الرقمي (Signing):
+   - قم بإنشاء ملف `keystore` خاص بك باستخدام `keytool`.
+   - قم بإنشاء ملف `key.properties` في مجلد `android/` يحتوي على مسار الـ keystore وكلمات السر.
+   - راجع التوثيق الرسمي لـ Flutter لمزيد من التفاصيل حول "Signing the app".
+
+4. بناء النسخة النهائية (Build APK/App Bundle):
+   - شغل الأمر التالي في التيرمينال:
+     `flutter build appbundle`
+   - سيتم إنشاء ملف في المسار: `build/app/outputs/bundle/release/app-release.aab`
+   - هذا هو الملف الذي يتم رفعه على متجر جوجل بلاي.
+
+5. متجر جوجل بلاي (Play Console):
+   - أنشئ حساب مطور (إذا لم يكن لديك).
+   - أنشئ تطبيق جديد واملأ البيانات (الوصف، الصور، التصنيف).
+   - ارفع ملف الـ `.aab` في قسم "Production".
+
+ملاحظة:
+تم ضبط اسم الحزمة (Package Name) ليكون `com.nanohive.link_guard` كما طلبت.
+وتم ضبط اسم التطبيق ليكون `LinkGuard`.
+وتمت إضافة صلاحيات الإنترنت في `AndroidManifest.xml`.
+
+بالتوفيق!
+شركة Nano Hive
