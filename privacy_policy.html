@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سياسة الخصوصية – LinkGuard | Privacy Policy</title>
+  <style>
+    :root {
+      --blue:    #3B82F6;
+      --dark:    #0A0F1E;
+      --surface: #111827;
+      --card:    #1F2937;
+      --text:    #F9FAFB;
+      --sub:     #9CA3AF;
+      --border:  #374151;
+      --green:   #22C55E;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0D1B2E 0%, #0A0F1E 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 36px;
+      text-align: center;
+    }
+
+    .shield {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(59,130,246,0.45);
+      margin-bottom: 20px;
+    }
+
+    .shield svg { width: 36px; height: 36px; fill: white; }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: white;
+    }
+
+    header p {
+      color: var(--sub);
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 14px;
+      background: rgba(34,197,94,0.12);
+      color: var(--green);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 50px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* ── Lang switcher ── */
+    .lang-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .lang-bar button {
+      background: var(--card);
+      color: var(--sub);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 6px 20px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+
+    .lang-bar button.active,
+    .lang-bar button:hover {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .meta {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      font-size: 0.875rem;
+      color: var(--sub);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+    }
+
+    .meta span strong { color: var(--text); }
+
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+
+    section:hover { border-color: rgba(59,130,246,0.4); }
+
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      background: rgba(59,130,246,0.15);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    section p, section li {
+      color: var(--sub);
+      font-size: 0.925rem;
+    }
+
+    section ul {
+      padding-right: 20px;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+
+    html[lang="en"] section ul { padding-right: 0; padding-left: 20px; }
+
+    section li { margin-bottom: 6px; }
+
+    .highlight {
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: var(--green) !important;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    .warn {
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.25);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #FBBF24 !important;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      section { padding: 20px; }
+    }
+
+    /* Lang display */
+    [data-ar], [data-en] { display: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="shield">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5L12 1z"/>
+      </svg>
+    </div>
+    <h1>LinkGuard</h1>
+    <p>Nano Hive · com.nanohive.link_guard</p>
+    <span class="badge">✓ لا نجمع بياناتك الشخصية · We do not collect personal data</span>
+  </header>
+
+  <div class="lang-bar">
+    <button id="btn-ar" class="active" onclick="setLang('ar')">العربية</button>
+    <button id="btn-en" onclick="setLang('en')">English</button>
+  </div>
+
+  <main>
+
+    <!-- ──────────── META ──────────── -->
+    <div class="meta">
+      <span><strong data-ar>آخر تحديث</strong><strong data-en>Last Updated</strong>: 29 April 2026</span>
+      <span><strong data-ar>المطوّر</strong><strong data-en>Developer</strong>: Nano Hive</span>
+      <span><strong data-ar>التطبيق</strong><strong data-en>App</strong>: LinkGuard</span>
+      <span><strong data-ar>التواصل</strong><strong data-en>Contact</strong>: <a href="mailto:privacy@nanohive.app">privacy@nanohive.app</a></span>
+    </div>
+
+    <!-- ── 1 · Overview ── -->
+    <section>
+      <h2><span class="icon">🛡️</span>
+        <span data-ar>نظرة عامة</span>
+        <span data-en>Overview</span>
+      </h2>
+      <p data-ar>
+        تطبيق <strong>LinkGuard</strong> من تطوير شركة <strong>Nano Hive</strong>. يتيح لك التطبيق فحص الروابط
+        للتحقق من مدى أمانها قبل زيارتها، باستخدام خدمات Google Safe Browsing وVirusTotal.
+        نحن نُقدّر خصوصيتك ونلتزم بحمايتها.
+      </p>
+      <p data-en>
+        <strong>LinkGuard</strong> is developed by <strong>Nano Hive</strong>. The app lets you scan
+        URLs to verify their safety before visiting them, using Google Safe Browsing and VirusTotal services.
+        We value and are committed to protecting your privacy.
+      </p>
+    </section>
+
+    <!-- ── 2 · Data we collect ── -->
+    <section>
+      <h2><span class="icon">📋</span>
+        <span data-ar>البيانات التي نجمعها</span>
+        <span data-en>Data We Collect</span>
+      </h2>
+      <p data-ar>نجمع الحد الأدنى من البيانات اللازمة لتشغيل التطبيق فقط:</p>
+      <p data-en>We collect only the minimum data necessary to operate the app:</p>
+      <ul>
+        <li data-ar><strong>الروابط التي تُدخلها:</strong> يتم إرسالها إلى Google Safe Browsing أو VirusTotal للفحص فقط ولا تُخزَّن لدينا.</li>
+        <li data-en><strong>URLs you submit:</strong> Sent to Google Safe Browsing or VirusTotal for scanning only — not stored by us.</li>
+        <li data-ar><strong>تفضيلات التطبيق:</strong> اختيار الثيم (فاتح/داكن) واللغة — تُخزَّن محلياً على جهازك فقط.</li>
+        <li data-en><strong>App preferences:</strong> Theme (light/dark) and language — stored locally on your device only.</li>
+      </ul>
+      <p class="highlight" data-ar>
+        ✓ لا نجمع: الاسم، البريد الإلكتروني، رقم الهاتف، الموقع الجغرافي، بيانات الجهاز، أو أي معلومات شخصية.
+      </p>
+      <p class="highlight" data-en>
+        ✓ We do NOT collect: name, email, phone number, location, device information, or any personal identifiers.
+      </p>
+    </section>
+
+    <!-- ── 3 · Third-party services ── -->
+    <section>
+      <h2><span class="icon">🔗</span>
+        <span data-ar>الخدمات الخارجية</span>
+        <span data-en>Third-Party Services</span>
+      </h2>
+      <p data-ar>يستخدم التطبيق الخدمات الخارجية التالية لفحص الروابط. راجع سياساتهم للمزيد:</p>
+      <p data-en>The app uses the following third-party services to scan URLs. Please review their policies:</p>
+      <ul>
+        <li>
+          <strong>Google Safe Browsing</strong> —
+          <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>
+        </li>
+        <li>
+          <strong>VirusTotal</strong> —
+          <a href="https://www.virustotal.com/gui/privacy-policy" target="_blank">virustotal.com/privacy-policy</a>
+        </li>
+      </ul>
+      <p class="warn" data-ar>
+        ⚠️ الروابط التي تُرسلها تذهب إلى هذه الخدمات لغرض الفحص. لا تُرسل روابط تحتوي على بيانات حساسة.
+      </p>
+      <p class="warn" data-en>
+        ⚠️ URLs you submit are sent to these services for scanning purposes. Do not submit URLs containing sensitive information.
+      </p>
+    </section>
+
+    <!-- ── 4 · Data storage ── -->
+    <section>
+      <h2><span class="icon">💾</span>
+        <span data-ar>تخزين البيانات والأمان</span>
+        <span data-en>Data Storage & Security</span>
+      </h2>
+      <ul>
+        <li data-ar>سجل الفحص (آخر 20 رابط) يُخزَّن في ذاكرة التطبيق المؤقتة ويُحذف عند إغلاقه.</li>
+        <li data-en>Scan history (last 20 URLs) is stored in app memory only and deleted when the app closes.</li>
+        <li data-ar>لا يوجد سيرفر خاص بنا يستقبل أو يخزن أي بياناتك.</li>
+        <li data-en>We operate no server that receives or stores any of your data.</li>
+        <li data-ar>التفضيلات (ثيم / لغة) تُحفظ على جهازك فقط عبر SharedPreferences.</li>
+        <li data-en>Preferences (theme / language) are saved on your device only via SharedPreferences.</li>
+      </ul>
+    </section>
+
+    <!-- ── 5 · Children ── -->
+    <section>
+      <h2><span class="icon">👶</span>
+        <span data-ar>خصوصية الأطفال</span>
+        <span data-en>Children's Privacy</span>
+      </h2>
+      <p data-ar>
+        لا يستهدف التطبيق الأطفال دون سن 13 عامًا ولا يجمع عن قصد أي بيانات خاصة بهم.
+        إذا علمت أن طفلاً قدّم بياناته، يُرجى التواصل معنا.
+      </p>
+      <p data-en>
+        This app is not directed at children under 13 and does not knowingly collect data from them.
+        If you believe a child has provided data, please contact us.
+      </p>
+    </section>
+
+    <!-- ── 6 · User rights ── -->
+    <section>
+      <h2><span class="icon">⚖️</span>
+        <span data-ar>حقوقك</span>
+        <span data-en>Your Rights</span>
+      </h2>
+      <p data-ar>بما أننا لا نجمع بياناتك الشخصية، لا يوجد ما يمكن حذفه أو تصديره من جانبنا. يمكنك:</p>
+      <p data-en>Since we don't collect your personal data, there's nothing to delete or export on our end. You can:</p>
+      <ul>
+        <li data-ar>مسح سجل الفحص يدويًا من داخل التطبيق.</li>
+        <li data-en>Manually clear scan history from within the app.</li>
+        <li data-ar>حذف بيانات التطبيق من إعدادات جهازك في أي وقت.</li>
+        <li data-en>Delete app data from your device settings at any time.</li>
+      </ul>
+    </section>
+
+    <!-- ── 7 · Changes ── -->
+    <section>
+      <h2><span class="icon">📝</span>
+        <span data-ar>تحديثات السياسة</span>
+        <span data-en>Policy Updates</span>
+      </h2>
+      <p data-ar>
+        قد نُحدّث هذه السياسة من وقت لآخر. سيتم الإشارة إلى تاريخ آخر تحديث في أعلى الصفحة.
+        استمرارك في استخدام التطبيق يعني موافقتك على السياسة المحدّثة.
+      </p>
+      <p data-en>
+        We may update this policy from time to time. The last-updated date at the top of the page will reflect changes.
+        Continued use of the app implies acceptance of the updated policy.
+      </p>
+    </section>
+
+    <!-- ── 8 · Contact ── -->
+    <section>
+      <h2><span class="icon">✉️</span>
+        <span data-ar>التواصل معنا</span>
+        <span data-en>Contact Us</span>
+      </h2>
+      <p data-ar>لأي استفسار يتعلق بهذه السياسة:</p>
+      <p data-en>For any questions regarding this policy:</p>
+      <ul>
+        <li><strong data-ar>البريد الإلكتروني</strong><strong data-en>Email</strong>: <a href="mailto:privacy@nanohive.app">privacy@nanohive.app</a></li>
+        <li><strong data-ar>الشركة</strong><strong data-en>Company</strong>: Nano Hive</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Nano Hive · LinkGuard · com.nanohive.link_guard</p>
+    <p style="margin-top:6px;">
+      <span data-ar>جميع الحقوق محفوظة</span>
+      <span data-en>All Rights Reserved</span>
+    </p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        el.style.display = lang === 'ar' ? '' : 'none';
+      });
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.style.display = lang === 'en' ? '' : 'none';
+      });
+
+      document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+
+    // Init
+    setLang('ar');
+  </script>
+
+</body>
+</html>
